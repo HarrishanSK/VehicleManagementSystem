@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="496.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customer.BillFXMLController">
+   <children>
+      <TextArea fx:id="textArea" editable="false" layoutX="36.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="256.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="32.0" />
+      <Label layoutX="32.0" layoutY="264.0" prefHeight="17.0" prefWidth="154.0" text="Total cost:" AnchorPane.bottomAnchor="207.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="128.0" />
+      <Label fx:id="totalCostLabel" layoutX="374.0" layoutY="272.0" prefHeight="17.0" prefWidth="83.0" text="tc" textAlignment="RIGHT" AnchorPane.bottomAnchor="207.0" AnchorPane.rightAnchor="32.0" />
+      <Label layoutX="32.0" layoutY="300.0" prefHeight="17.0" prefWidth="154.0" text="Due:" AnchorPane.bottomAnchor="175.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="128.0" />
+      <Label fx:id="dueCostLabel" layoutX="350.0" layoutY="300.0" prefHeight="17.0" prefWidth="83.0" text="due" textAlignment="RIGHT" AnchorPane.bottomAnchor="175.0" AnchorPane.rightAnchor="32.0" />
+      <Button layoutX="207.0" layoutY="409.0" mnemonicParsing="false" onAction="#pay" text="pay" />
+      <TextField fx:id="payTextField" layoutX="144.0" layoutY="361.0" />
+   </children>
+</AnchorPane>

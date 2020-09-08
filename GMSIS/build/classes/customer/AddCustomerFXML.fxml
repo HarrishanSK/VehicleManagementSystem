@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="309.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customer.AddCustomerFXMLController">
+   <children>
+      <Button fx:id="addButton" layoutX="327.0" layoutY="239.0" mnemonicParsing="false" text="Add" />
+      <Button fx:id="cancelButton" layoutX="198.0" layoutY="239.0" mnemonicParsing="false" text="Cancel" />
+      <TextField fx:id="fullNameTextField" layoutX="27.0" layoutY="32.0" prefHeight="27.0" prefWidth="527.0" promptText="full name" />
+      <TextField fx:id="addressTextField" layoutX="27.0" layoutY="77.0" prefHeight="27.0" prefWidth="321.0" promptText="address" />
+      <TextField fx:id="postcodeTextField" layoutX="387.0" layoutY="77.0" promptText="postcode" />
+      <TextField fx:id="emailTextField" layoutX="27.0" layoutY="124.0" prefHeight="27.0" prefWidth="275.0" promptText="email" />
+      <TextField fx:id="phoneNumberTextField" layoutX="324.0" layoutY="124.0" prefHeight="27.0" prefWidth="230.0" promptText="phone number" />
+      <ChoiceBox fx:id="customerTypeChoiceBox" layoutX="27.0" layoutY="173.0" prefWidth="150.0" />
+   </children>
+</Pane>

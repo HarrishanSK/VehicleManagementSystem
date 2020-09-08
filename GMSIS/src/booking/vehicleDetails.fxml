@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booking.VehicleDetailsController">
+   <children>
+      <Button fx:id="updateMileage" layoutX="74.0" layoutY="350.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="193.0" text="Update Mileage" />
+      <Label blendMode="EXCLUSION" layoutX="160.0" layoutY="6.0" prefHeight="69.0" prefWidth="239.0" text="Update Mileage" textFill="#4d5b8d">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <TextField fx:id="mileage" editable="false" layoutX="182.0" layoutY="207.0" prefHeight="37.0" prefWidth="228.0" />
+      <Label layoutX="15.0" layoutY="97.0" prefHeight="37.0" prefWidth="117.0" text="Vehicle ID:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="212.0" prefHeight="27.0" prefWidth="130.0" text="Current Mileage:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="vehicle_id" editable="false" layoutX="182.0" layoutY="97.0" prefHeight="37.0" prefWidth="228.0" />
+      <TextField fx:id="new_mileage" layoutX="182.0" layoutY="262.0" prefHeight="37.0" prefWidth="228.0" promptText="Enter New Mileage" />
+      <Label layoutX="16.0" layoutY="267.0" prefHeight="27.0" prefWidth="130.0" text="New Mileage:" textFill="#cd1c1c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="vehicle_reg" editable="false" layoutX="182.0" layoutY="150.0" prefHeight="37.0" prefWidth="228.0" />
+      <Label layoutX="15.0" layoutY="155.0" prefHeight="27.0" prefWidth="160.0" text="Registration Number:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="close" layoutX="281.0" layoutY="350.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="193.0" text="Close" />
+      <Separator layoutY="74.0" prefHeight="0.0" prefWidth="545.0" />
+      <Separator layoutX="6.0" layoutY="323.0" prefHeight="3.0" prefWidth="538.0" />
+      <Separator layoutX="272.0" layoutY="322.0" orientation="VERTICAL" prefHeight="91.0" prefWidth="6.0" />
+   </children>
+</AnchorPane>

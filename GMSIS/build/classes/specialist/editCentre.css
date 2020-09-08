@@ -1,0 +1,63 @@
+/******************************************************************************
+*
+* label
+*
+/******************************************************************************/
+#heading {
+   -fx-font-family: 'Avenir';
+	-fx-font-size: 23px;
+}
+
+.pane {
+    
+    -fx-background-color : #ede8e8;
+}
+
+.label{
+   -fx-font-family: 'Avenir';
+	-fx-font-size: 15px;
+}
+
+#label2 {
+ -fx-font-family: 'Avenir';
+	-fx-font-size: 18px;
+}
+
+/******************************************************************************
+*
+* Button
+*
+/******************************************************************************/
+.button {
+	-fx-font-family: 'Avenir';
+	-fx-background-color: rgb(203, 64, 64);
+	-fx-font-size: 16px;
+	-fx-text-fill: white;
+	-fx-background-radius: 10;
+	-fx-effect: dropshadow( three-pass-box , rgb(0,0,0) , 5, 0.0 , 0 , 0);
+}
+
+.button:hover {
+	-fx-translate-y: -5
+}
+
+.button:armed {
+	-fx-effect:null;
+}
+/******************************************************************************
+*
+* Text Field
+*
+/******************************************************************************/
+.text-field{
+    -fx-background-color: rgb(55, 55, 55);
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-family: 'Avenir';
+    -fx-alignment: CENTER;
+    -fx-font-size: 16px;
+}
+
+.text-field:hover, .text-field:focused{
+    -fx-background-color: rgb(203, 64, 64);
+}

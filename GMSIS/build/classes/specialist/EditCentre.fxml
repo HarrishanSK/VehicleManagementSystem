@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.sun.javafx.charts.*?>
+<?import de.jensd.fx.fontawesome.test.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="564.0" style="-fx-background-color: #ede8e8;" stylesheets="@editCentre.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.EditCentreController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="108.0" layoutY="96.0" prefHeight="242.0" prefWidth="415.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="oldNameTextField" editable="false" layoutX="9.0" layoutY="14.0" prefHeight="45.0" prefWidth="185.0" />
+                  <TextField fx:id="oldAddressTextField" editable="false" layoutX="9.0" layoutY="69.0" prefHeight="45.0" prefWidth="185.0" />
+                  <TextField fx:id="oldPhoneTextField" editable="false" layoutX="9.0" layoutY="126.0" prefHeight="45.0" prefWidth="185.0" />
+                  <TextField fx:id="oldEmailTextField" editable="false" layoutX="9.0" layoutY="181.0" prefHeight="45.0" prefWidth="185.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="newNameTextField" alignment="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="45.0" prefWidth="185.0" promptText="Enter Name" />
+                  <TextField fx:id="newAddressTextField" alignment="CENTER" layoutX="9.0" layoutY="68.0" prefHeight="45.0" prefWidth="185.0" promptText="Enter Address" />
+                  <TextField fx:id="newPhoneTextField" alignment="CENTER" layoutX="9.0" layoutY="126.0" prefHeight="45.0" prefWidth="185.0" promptText="Enter Phone" />
+                  <TextField fx:id="newEmailTextField" alignment="CENTER" layoutX="9.0" layoutY="181.0" prefHeight="45.0" prefWidth="185.0" promptText="Enter Email" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <VBox layoutX="14.0" layoutY="95.0" prefHeight="240.0" prefWidth="100.0">
+         <children>
+            <Label fx:id="nameLabel" alignment="CENTER" prefHeight="60.0" prefWidth="100.0" text="Name :" />
+            <Label fx:id="addressLabel" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="100.0" text="Address :" />
+            <Label fx:id="phoneLabel" alignment="CENTER" layoutX="10.0" layoutY="70.0" prefHeight="60.0" prefWidth="100.0" text="Phone :" />
+            <Label fx:id="emailLabel" alignment="CENTER" layoutX="10.0" layoutY="130.0" prefHeight="60.0" prefWidth="100.0" text="Email :" />
+         </children>
+      </VBox>
+      <Label id="label2" fx:id="originalLabel" alignment="CENTER" layoutX="108.0" layoutY="73.0" prefHeight="23.0" prefWidth="203.0" text="Original">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label id="label2" fx:id="newLabel" alignment="CENTER" layoutX="319.0" layoutY="73.0" prefHeight="23.0" prefWidth="203.0" text="New">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <HBox layoutY="354.0" prefHeight="73.0" prefWidth="637.0">
+         <children>
+            <Button fx:id="editButton" layoutX="50.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="184.0" text="EDIT">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="110.0" right="40.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="319.0" layoutY="15.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="184.0" text="CANCEL">
+               <HBox.margin>
+                  <Insets bottom="5.0" right="80.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Label id="heading" fx:id="headingLabel" alignment="CENTER" prefHeight="63.0" prefWidth="633.0" stylesheets="@editCentre.css" text="EDIT  EXISTING  CENTRE">
+         <font>
+            <Font name="Hoefler Text" size="23.0" />
+         </font>
+      </Label>
+      <Label id="label2" alignment="CENTER" layoutY="36.0" prefHeight="27.0" prefWidth="564.0" style="-fx-font-size: 14px;" text="                      Only fill in the details you want to change.">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+compile.on.save=true
+do.depend=false
+do.jar=true
+javac.debug=true
+javadoc.preview=true
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+user.properties.file=/Users/matteo/Library/Application Support/NetBeans/8.2/build.properties
+=======
+user.properties.file=/Users/Pahel/Library/Application Support/NetBeans/8.1/build.properties
+>>>>>>> Stashed changes
+=======
+user.properties.file=/Users/Pahel/Library/Application Support/NetBeans/8.1/build.properties
+>>>>>>> origin/master
+=======
+<<<<<<< Updated upstream
+user.properties.file=/Users/matteo/Library/Application Support/NetBeans/8.2/build.properties
+=======
+<<<<<<< HEAD
+user.properties.file=/Users/matteo/Library/Application Support/NetBeans/8.2/build.properties
+=======
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+user.properties.file=C:\\Users\\Yousf\\AppData\\Roaming\\NetBeans\\8.2\\build.properties
+=======
+user.properties.file=C:\\Users\\Yousf\\AppData\\Roaming\\NetBeans\\8.2\\build.properties
+>>>>>>> origin/master
+=======
+<<<<<<< Updated upstream
+user.properties.file=C:\\Users\\Harri\\AppData\\Roaming\\NetBeans\\8.2\\build.properties
+=======
+<<<<<<< HEAD
+user.properties.file=/Users/elsahu/Library/Application Support/NetBeans/8.1/build.properties
+=======
+<<<<<<< HEAD
+user.properties.file=/Users/Pahel/Library/Application Support/NetBeans/8.1/build.properties
+=======
+user.properties.file=/Users/Pahel/Library/Application Support/NetBeans/8.1/build.properties
+>>>>>>> origin/master
+>>>>>>> 15ec1185a033749aa2792ea9e6749bbc738bd056
+>>>>>>> origin/master
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

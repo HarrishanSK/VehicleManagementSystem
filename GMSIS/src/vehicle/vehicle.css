@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-Mar-2017, 19:31:13
+    Author     : harri
+*/
+
+*{
+    
+    .table{
+        
+        -fx-background-color: blue; 
+    }
+    
+    .table-view {
+	-fx-base: rgb(50, 55, 60);
+	-fx-control-inner-background: rgb(50, 55, 60);
+	-fx-background-color: rgbrgb(50, 55, 60);
+	-fx-table-cell-border-color: rgb(50, 55, 60);
+        	-fx-text-fill: yellow;
+	-fx-table-header-border-color: rgb(50, 55, 60);
+	-fx-padding: 0;
+}
+
+.text-field {
+        -fx-text-fill: white;
+	-fx-background-color:rgb(50, 55, 60);
+    	-fx-base: rgb(50, 55, 60);
+	-fx-control-inner-background: rgb(50, 55, 60);
+
+}
+
+.text-field .prompt{
+    -fx-text-fill: white;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+	-fx-text-fill: white;
+	-fx-background-color:rgb(0, 90, 64);
+        -fx-background-color: rgb(60, 65, 60);
+         fx-background-color: rgb(200, 200, 200);
+}
+
+.table-view .table-cell {
+
+	-fx-text-fill: white;
+}
+
+.button:hover {
+		-fx-background-color: rgb(60, 65, 60);
+}
+
+.button {
+	-fx-background-color: rgb(50, 55, 60);
+	-fx-font-size: 15px;
+	-fx-text-fill: rgb(150, 150, 150);
+	-fx-background-radius: 0;
+	-fx-effect: dropshadow( three-pass-box , rgb(0,0,0) , 5, 0.0 , 0 , 0);
+}
+}
+
+

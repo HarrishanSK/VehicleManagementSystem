@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="875.0" prefWidth="1402.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vehicle.EditVehicle2Controller">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="853.0" prefWidth="1370.0">
+               <children>
+                  <Pane fx:id="warrantyPane" layoutX="713.0" layoutY="183.0" prefHeight="550.0" prefWidth="619.0">
+                     <children>
+                        <TextField fx:id="nameOfWarrantyCompanyTextField" layoutX="66.0" layoutY="59.0" prefHeight="42.0" prefWidth="402.0" />
+                        <TextField fx:id="addressOfWarrantyCompanyTextField" layoutX="65.0" layoutY="240.0" prefHeight="67.0" prefWidth="529.0" />
+                        <DatePicker fx:id="EXPdatepicker" layoutX="343.0" layoutY="479.0" prefHeight="34.0" prefWidth="139.0" promptText="Date" visible="false" />
+                        <Label layoutX="66.0" layoutY="390.0" prefHeight="51.0" prefWidth="555.0" text="Expiry Date Of Warrenty Company:" textFill="#001e46">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="65.0" layoutY="170.0" prefHeight="51.0" prefWidth="440.0" text="Address Of Warrenty Company:" textFill="#001e46">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="65.0" layoutY="1.0" prefHeight="51.0" prefWidth="402.0" text="Name Of Warrenty Company:" textFill="#001e46">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="expiryDateOfWarrantyTextField" layoutX="66.0" layoutY="479.0" prefHeight="66.0" prefWidth="280.0" />
+                        <Label layoutX="65.0" layoutY="428.0" prefHeight="51.0" prefWidth="167.0" text="YYYY-MM-DD" textFill="#001f456f" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="editButton" layoutX="768.0" layoutY="767.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="262.0" text="Edit" />
+                  <Button fx:id="cancelButton" layoutX="1096.0" layoutY="767.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="262.0" text="Cancel" />
+                  <Label layoutX="44.0" layoutY="756.0" prefHeight="51.0" prefWidth="243.0" text="Last Service Date:" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="678.0" prefHeight="51.0" prefWidth="231.0" text="Current Mileage:" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="619.0" prefHeight="51.0" prefWidth="262.0" text="MOT Renewal Date:" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="49.0" layoutY="546.0" prefHeight="51.0" prefWidth="108.0" text="Colour:" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="475.0" prefHeight="51.0" prefWidth="139.0" text="Fuel Type:" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="48.0" layoutY="411.0" prefHeight="51.0" prefWidth="167.0" text="Engine Size:" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="300.0" prefHeight="51.0" prefWidth="87.0" text="Make:" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="49.0" layoutY="356.0" prefHeight="51.0" prefWidth="108.0" text="Model:" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="242.0" prefHeight="51.0" prefWidth="291.0" text="Registration Number:" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="191.0" prefHeight="51.0" prefWidth="186.0" text="Vehicle Type:" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="28.0" prefHeight="84.0" prefWidth="323.0" text="Edit Vehicle:" textFill="#000064">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="vehicleTypeChoiceBox" layoutX="350.0" layoutY="179.0" prefWidth="150.0" />
+                  <TextField fx:id="resgistrationNumberTextField" layoutX="347.0" layoutY="242.0" prefHeight="42.0" prefWidth="281.0" />
+                  <TextField fx:id="makeTextField" layoutX="348.0" layoutY="300.0" prefHeight="50.0" prefWidth="196.0" />
+                  <TextField fx:id="modelTextField" layoutX="342.0" layoutY="356.0" prefHeight="50.0" prefWidth="196.0" />
+                  <TextField fx:id="engineSizeTextField" layoutX="339.0" layoutY="417.0" prefHeight="44.0" prefWidth="202.0" />
+                  <TextField fx:id="fuelTypeTextField" layoutX="345.0" layoutY="475.0" prefHeight="57.0" prefWidth="219.0" />
+                  <TextField fx:id="colourTextField" layoutX="342.0" layoutY="546.0" prefHeight="50.0" prefWidth="268.0" />
+                  <DatePicker fx:id="MOTdatepicker" layoutX="559.0" layoutY="619.0" prefHeight="34.0" prefWidth="139.0" promptText="Date" visible="false" />
+                  <TextField fx:id="currentMileageTextField" layoutX="342.0" layoutY="690.0" prefHeight="42.0" prefWidth="191.0" />
+                  <DatePicker fx:id="LSDdatepicker" layoutX="574.0" layoutY="756.0" prefHeight="34.0" prefWidth="139.0" promptText="Date" visible="false" />
+                  <CheckBox fx:id="warrantyCheckBox" layoutX="774.0" layoutY="119.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="219.0" text="Warranty" />
+                  <Label layoutX="350.0" layoutY="47.0" prefHeight="51.0" prefWidth="231.0" text="Vehicle ID" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="vehicleTemplatesChoiceBox" layoutX="350.0" layoutY="115.0" prefWidth="150.0" />
+                  <TextField fx:id="customerTextField" layoutX="950.0" layoutY="45.0" prefHeight="28.0" prefWidth="131.0" />
+                  <Label layoutX="774.0" layoutY="45.0" prefHeight="51.0" prefWidth="174.0" text="Customer ID" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="motRenewalDateTextField" layoutX="344.0" layoutY="618.0" prefHeight="51.0" prefWidth="213.0" />
+                  <TextField fx:id="lastServiceDateTextField" layoutX="340.0" layoutY="756.0" prefHeight="51.0" prefWidth="231.0" />
+                  <TextField fx:id="vehicleTextField" editable="false" layoutX="500.0" layoutY="47.0" prefHeight="51.0" prefWidth="186.0" />
+                  <Label layoutX="50.0" layoutY="115.0" prefHeight="51.0" prefWidth="268.0" text="Vehicle Templates" textFill="#001e46">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="warrantyTextField" layoutX="928.0" layoutY="119.0" prefHeight="28.0" prefWidth="131.0" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

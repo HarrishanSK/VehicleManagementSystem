@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="447.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booking.RepairSectionController">
+   <children>
+      <Label blendMode="EXCLUSION" layoutX="138.0" layoutY="14.0" prefHeight="66.0" prefWidth="202.0" text="Mechanic Hours" textFill="#4d5b8d">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Button fx:id="submit" layoutX="37.0" layoutY="305.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="183.0" text="Submit" />
+      <TextField fx:id="hoursWorked" layoutX="128.0" layoutY="200.0" prefHeight="38.0" prefWidth="272.0" promptText="Hours Worked" />
+      <Label layoutX="9.0" layoutY="126.0" prefHeight="38.0" prefWidth="107.0" text="Mechanic ID:" />
+      <Label layoutX="9.0" layoutY="200.0" prefHeight="38.0" prefWidth="107.0" text="Hours Worked:" />
+      <ChoiceBox fx:id="mechanic_id" layoutX="128.0" layoutY="126.0" prefHeight="38.0" prefWidth="272.0" />
+      <Button fx:id="close" layoutX="252.0" layoutY="305.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="183.0" text="Close" />
+      <Separator layoutY="84.0" prefHeight="3.0" prefWidth="491.0" />
+      <Separator layoutX="-2.0" layoutY="281.0" prefHeight="3.0" prefWidth="491.0" />
+      <Separator layoutX="233.0" layoutY="281.0" orientation="VERTICAL" prefHeight="78.0" prefWidth="5.0" />
+   </children>
+</AnchorPane>

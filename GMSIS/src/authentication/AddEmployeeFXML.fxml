@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="authentication.AddEmployeeFXMLController">
+   <children>
+      <TextField fx:id="firstNameTextField" layoutX="41.0" layoutY="33.0" promptText="First name" />
+      <TextField fx:id="lastNameTextField" layoutX="41.0" layoutY="77.0" promptText="Last name" />
+      <PasswordField fx:id="passwordTextField" layoutX="41.0" layoutY="118.0" promptText="Password" />
+      <PasswordField fx:id="passwordConfirmationTextField" layoutX="41.0" layoutY="164.0" promptText="Confirm Password" />
+      <Button layoutX="95.0" layoutY="290.0" mnemonicParsing="false" onAction="#save" text="Add" />
+      <Button layoutX="86.0" layoutY="330.0" mnemonicParsing="false" onAction="#closeStage" text="Cancel" />
+      <ChoiceBox fx:id="typeChoiceBox" layoutX="42.0" layoutY="246.0" prefWidth="150.0" />
+      <TextField fx:id="wageTextField" layoutX="41.0" layoutY="206.0" promptText="Wage" />
+   </children>
+</AnchorPane>

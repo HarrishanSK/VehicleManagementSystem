@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="1099.0" stylesheets="@specialist.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.SpecialistController">
+   <children>
+      <TabPane layoutX="-18.0" layoutY="-135.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="1016.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab style="-fx-font-family: Avenir; -fx-font-size: 14px;" text="Specialist Centres">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="357.0" prefWidth="746.0" style="-fx-background-color: #ede8e8;">
+                     <children>
+                        <Button fx:id="addCentre" layoutX="210.0" layoutY="50.0" mnemonicParsing="false" onAction="#addSpecialistCentre" prefHeight="60.0" prefWidth="175.0" text="Add New Centre" />
+                        <Button fx:id="editExistingCentre" layoutX="455.0" layoutY="50.0" mnemonicParsing="false" onAction="#editCentre" prefHeight="60.0" prefWidth="175.0" text="Edit Existing Centre" />
+                        <Button fx:id="deleteExistingCentre" layoutX="699.0" layoutY="50.0" mnemonicParsing="false" onAction="#deleteCentre" prefHeight="60.0" prefWidth="175.0" text="Delete Existing Centre" />
+                        <TableView fx:id="tableView" layoutX="210.0" layoutY="144.0" prefHeight="298.0" prefWidth="664.0">
+                           <columns>
+                              <TableColumn fx:id="nameColumn" prefWidth="135.0" text="Name" />
+                              <TableColumn fx:id="addressColumn" prefWidth="216.0" text="Address" />
+                              <TableColumn fx:id="phoneColumn" minWidth="0.0" prefWidth="138.0" text="Phone" />
+                              <TableColumn fx:id="emailColumn" prefWidth="173.0" text="Email" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-font-family: Avenir; -fx-font-size: 14px;" text="Repair Assignments">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6964448495897904" layoutX="766.0" layoutY="48.0" prefHeight="459.0" prefWidth="1099.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #ede8e8;">
+                                 <children>
+                                    <TableView fx:id="table2" layoutX="24.0" layoutY="74.0" prefHeight="326.0" prefWidth="713.0">
+                                      <columns>
+                                        <TableColumn fx:id="table2CustomerColumn" prefWidth="193.0" sortable="false" text="Customer" />
+                                        <TableColumn fx:id="table2VehicleColumn" prefWidth="191.0" sortable="false" text="Vehicle" />
+                                          <TableColumn fx:id="table2StatusColumn" prefWidth="185.0" sortable="false" text="Repair Status" />
+                                          <TableColumn fx:id="table2PartColumn" prefWidth="144.0" sortable="false" text="Part Id" />
+                                      </columns>
+                                    </TableView>
+                                    <ComboBox fx:id="whichCentre" layoutX="24.0" layoutY="19.0" prefHeight="32.0" prefWidth="184.0" promptText="         Select Centre" />
+                                    <Button fx:id="display" alignment="CENTER" layoutX="284.0" layoutY="12.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="132.0" text="All Repairs" />
+                                    <Button fx:id="displayOutstanding" alignment="CENTER" layoutX="429.0" layoutY="12.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="162.0" text="Outstanding Repairs" />
+                                    <Button fx:id="allCentre" alignment="CENTER" layoutX="240.0" layoutY="409.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="282.0" text="Outstanding Repairs for all Centres" />
+                                    <Button fx:id="displayFinished" alignment="CENTER" layoutX="605.0" layoutY="12.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="132.0" text="Finished Repairs" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ScrollPane prefHeight="457.0" prefWidth="329.0">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="819.0" prefWidth="311.0" style="-fx-background-color: #ede8e8;">
+                                             <children>
+                                                <VBox layoutX="64.0" layoutY="62.0" prefHeight="740.0" prefWidth="193.0" styleClass="vbox">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="301.0" prefHeight="23.0" prefWidth="202.0" text="Specialist Repair Id" />
+                                                      <TextField fx:id="rID4" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="23.0" prefWidth="197.0" text="Booking Id" />
+                                                      <TextField fx:id="bID4" alignment="CENTER" editable="false" layoutX="10.0" layoutY="27.0" />
+                                                      <Label alignment="CENTER" prefHeight="23.0" prefWidth="203.0" text="Part Name" />
+                                                      <TextField fx:id="pName4" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" prefHeight="23.0" prefWidth="199.0" text="Part Description" />
+                                                      <TextArea fx:id="pDesc4" editable="false" prefHeight="127.0" prefWidth="168.0" />
+                                                      <Label alignment="CENTER" prefHeight="23.0" prefWidth="206.0" text="Specialist Repair Cost" />
+                                                      <TextField fx:id="rCost4" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" prefWidth="193.0" text="Centre Name" />
+                                                      <TextField fx:id="cName4" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" prefWidth="193.0" text="Repair Type" />
+                                                      <TextField fx:id="rType4" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="230.0" prefWidth="193.0" text="Repair Status" />
+                                                      <TextField fx:id="rStatus4" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" prefWidth="193.0" text="Vehicle Make" />
+                                                      <TextField fx:id="vMake4" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="257.0" prefWidth="193.0" text="Vehicle Model" />
+                                                      <TextField fx:id="vModel4" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="345.0" prefWidth="193.0" text="Delivery Date" />
+                                                      <TextField fx:id="dDate4" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="362.0" prefWidth="193.0" text="Return Date" />
+                                                      <TextField fx:id="rDate4" alignment="CENTER" editable="false" />
+                                                   </children>
+                                                </VBox>
+                                                <Label alignment="CENTER" layoutY="-4.0" prefHeight="36.0" prefWidth="329.0" style="-fx-font-family: Avenir; -fx-font-size: 23px;" text="Repair Details">
+                                                   <font>
+                                                      <Font name="Hoefler Text" size="23.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-font-family: Avenir; -fx-font-size: 14px;" text="Specialist Repairs">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.7575205104831358" layoutX="751.0" layoutY="70.0" prefHeight="459.0" prefWidth="1016.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #ede8e8;">
+                                 <children>
+                                    <TableView fx:id="repairsView" layoutX="12.0" layoutY="133.0" prefHeight="310.0" prefWidth="803.0">
+                                      <columns>
+                                        <TableColumn fx:id="bookingIDColumn" prefWidth="68.0" text="Booking" />
+                                        <TableColumn fx:id="customerNameColumn" prefWidth="124.0" sortable="false" text="Customer" />
+                                          <TableColumn fx:id="regNoColumn" prefWidth="119.0" sortable="false" text="Vehicle" />
+                                          <TableColumn fx:id="centreIDColumn" prefWidth="69.0" sortable="false" text="Centre" />
+                                          <TableColumn fx:id="partIDColumn" prefWidth="66.0" sortable="false" text="Part Id" />
+                                          <TableColumn fx:id="repairTypeColumn" prefWidth="102.0" sortable="false" text="Type" />
+                                          <TableColumn fx:id="statusColumn" prefWidth="91.0" sortable="false" text="Status" />
+                                          <TableColumn fx:id="delDateColumn" prefWidth="75.0" sortable="false" text="Delivery" />
+                                          <TableColumn fx:id="retDateColumn" prefWidth="89.0" sortable="false" text="Return" />
+                                      </columns>
+                                    </TableView>
+                                    <Label fx:id="bookingIdLabel" alignment="CENTER" layoutX="-15.0" layoutY="14.0" prefHeight="33.0" prefWidth="147.0" style="-fx-font-family: Avenir; -fx-font-size: 14px;" text="Booking ID :" />
+                                    <TextField fx:id="bookingIdTextfield" alignment="CENTER" layoutX="125.0" layoutY="19.0" promptText="Booking ID" />
+                                    <Button fx:id="makeSpecialistBookingButton" layoutX="354.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="183.0" text="Make Repair Booking" />
+                                    <Button fx:id="partRepairUpdateButton" layoutX="16.0" layoutY="81.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="163.0" text="Update Repair Status" />
+                                    <Button fx:id="partRepairEditButton" layoutX="195.0" layoutY="81.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="163.0" text="Edit Repair Part" />
+                                    <Button fx:id="partRepairDeleteButton" layoutX="374.0" layoutY="81.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="163.0" text="Delete Repair" />
+                                    <TextField fx:id="query" alignment="CENTER" layoutX="559.0" layoutY="52.0" onAction="#search" onKeyPressed="#search" prefHeight="34.0" prefWidth="136.0" promptText="Search Query" />
+                                    <Button fx:id="searchButton" layoutX="706.0" layoutY="47.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="114.0" text="Search" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ScrollPane layoutX="132.0" layoutY="-24.0" prefHeight="457.0" prefWidth="262.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="566.0" prefWidth="244.0" style="-fx-background-color: #ede8e8;">
+                                             <children>
+                                                <VBox layoutX="29.0" layoutY="64.0" prefHeight="474.0" prefWidth="189.0" styleClass="vbox">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="301.0" prefHeight="23.0" prefWidth="193.0" text="Specialist Repair Id" />
+                                                      <TextField fx:id="rID3" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" prefWidth="189.0" text="Part Name" />
+                                                      <TextField fx:id="pName3" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" prefWidth="189.0" text="Part Description">
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin></Label>
+                                                      <TextArea fx:id="pDesc3" editable="false" prefHeight="127.0" prefWidth="167.0">
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </TextArea>
+                                                      <Label alignment="CENTER" prefWidth="189.0" text="Specialist Repair Cost" />
+                                                      <TextField fx:id="rCost3" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" prefWidth="189.0" text="Centre Name" />
+                                                      <TextField fx:id="cName3" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" prefWidth="189.0" text="Vehicle Make" />
+                                                      <TextField fx:id="vMake3" alignment="CENTER" editable="false" />
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="257.0" prefWidth="189.0" text="Vehicle Model" />
+                                                      <TextField fx:id="vModel3" alignment="CENTER" editable="false" />
+                                                   </children>
+                                                </VBox>
+                                                <Label alignment="CENTER" layoutX="4.0" prefHeight="36.0" prefWidth="242.0" style="-fx-font-family: Avenir; -fx-font-size: 23px;" text="Repair Details">
+                                                   <font>
+                                                      <Font name="Avenir Roman" size="23.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-font-family: Avenir; -fx-font-size: 14px;" text="Vehicle Repairs">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6417502278942571" layoutX="771.0" layoutY="97.0" prefHeight="459.0" prefWidth="1099.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #ede8e8;">
+                                 <children>
+                                    <TableView fx:id="vehicleRepairsView" layoutX="22.0" layoutY="126.0" prefHeight="317.0" prefWidth="663.0">
+                                       <columns>
+                                          <TableColumn fx:id="bookingIDVehicleColumn" prefWidth="92.0" text="Booking " />
+                                          <TableColumn fx:id="customerNameVehicleColumn" prefWidth="127.0" sortable="false" text="Customer" />
+                                          <TableColumn fx:id="regNoVehicleColumn" minWidth="0.0" prefWidth="128.0" sortable="false" text="Vehicle " />
+                                          <TableColumn fx:id="centreIDVehicleColumn" prefWidth="111.0" sortable="false" text="Centre" />
+                                          <TableColumn fx:id="partIDVehicleColumn" prefWidth="97.0" sortable="false" text="Part ID" />
+                                          <TableColumn fx:id="statusVehicleColumn" prefWidth="108.0" sortable="false" text="Status" />
+                                       </columns>
+                                    </TableView>
+                                    <Label fx:id="vehicleIdLabel" alignment="CENTER" layoutX="14.0" layoutY="13.0" prefHeight="33.0" prefWidth="168.0" style="fx-font-family: Avenir; -fx-font-size: 14px;" text="Vehicle Registration No:" />
+                                    <TextField fx:id="vehicleIdTextfield" alignment="CENTER" layoutX="182.0" layoutY="16.0" prefHeight="27.0" prefWidth="301.0" promptText="Partial/Full Vehicle Registration Number" />
+                                    <Button fx:id="vehicleRepairSearchButton" layoutX="503.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="183.0" text="Search Repairs" />
+                                    <Button fx:id="vehicleRepairAddButton" layoutX="22.0" layoutY="77.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="163.0" text="Add Part" />
+                                    <Button fx:id="vehicleRepairEditButton" layoutX="272.0" layoutY="77.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="163.0" text="Edit Part" />
+                                    <Button fx:id="vehicleRepairDeleteButton" layoutX="522.0" layoutY="77.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="163.0" text="Delete Part" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ScrollPane prefHeight="457.0" prefWidth="389.0">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="524.0" prefWidth="371.0" style="-fx-background-color: #ede8e8;">
+                                             <children>
+                                                <Label alignment="CENTER" layoutY="-4.0" prefHeight="36.0" prefWidth="389.0" style="-fx-font-family: Avenir; -fx-font-size: 23px;" text="Repair Details">
+                                                   <font>
+                                                      <Font name="Hoefler Text" size="23.0" />
+                                                   </font>
+                                                </Label>
+                                                <VBox layoutY="65.0" prefHeight="440.0" prefWidth="167.0" styleClass="vbox">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="301.0" prefHeight="27.0" prefWidth="167.0" text="Specialist Repair Id" />
+                                                      <Label alignment="CENTER" prefHeight="27.0" prefWidth="167.0" text="Part Name">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="120.0" prefWidth="167.0" text="Part Description">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="27.0" prefWidth="167.0" text="Specialist Repair Cost">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="27.0" prefWidth="167.0" text="Centre Name">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="27.0" prefWidth="167.0" text="Repair Type">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="27.0" prefWidth="167.0" text="Vehicle Make">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="257.0" prefHeight="27.0" prefWidth="167.0" text="Vehicle Model">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="345.0" prefHeight="27.0" prefWidth="167.0" text="Delivery Date">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="362.0" prefHeight="27.0" prefWidth="167.0" text="Return Date">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="181.0" layoutY="65.0" prefHeight="440.0" prefWidth="167.0">
+                                                   <children>
+                                                      <TextField fx:id="rID" alignment="CENTER" editable="false" />
+                                                      <TextField fx:id="pName" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextArea fx:id="pDesc" editable="false" prefHeight="120.0" prefWidth="169.0">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </TextArea>
+                                                      <TextField fx:id="rCost" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="cName" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="rType" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="vMake" alignment="CENTER" editable="false" layoutX="10.0" layoutY="247.0">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="vModel" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="dDate" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="rDate" alignment="CENTER" editable="false" layoutX="10.0" layoutY="362.0">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-font-family: Avenir; -fx-font-size: 14px;" text="Repair Search">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6417502278942571" layoutX="771.0" layoutY="97.0" prefHeight="459.0" prefWidth="1099.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #ede8e8;">
+                                 <children>
+                                    <TextField fx:id="searchQueryTextField" alignment="CENTER" layoutX="23.0" layoutY="61.0" prefHeight="35.0" prefWidth="506.0" promptText="Partial/Full Customer Name or Vehicle Registration Number" />
+                                    <Button fx:id="search" alignment="CENTER" layoutX="547.0" layoutY="55.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="132.0" text="Search" />
+                                    <TableView fx:id="searchTable" layoutX="23.0" layoutY="122.0" prefHeight="317.0" prefWidth="656.0">
+                                       <columns>
+                                          <TableColumn fx:id="searchBookingIdColumn" prefWidth="135.0" text="Booking " />
+                                          <TableColumn fx:id="searchCentreColumn" prefWidth="127.0" sortable="false" text="Centre" />
+                                          <TableColumn fx:id="searchNameColumn" prefWidth="135.0" sortable="false" text="Customer" />
+                                          <TableColumn fx:id="searchRegNoColumn" prefWidth="160.0" sortable="false" text="Vehicle" />
+                                          <TableColumn fx:id="searchPartIdColumn" prefWidth="100.0" sortable="false" text="Part ID" />
+                                       </columns>
+                                    </TableView>
+                                    <ComboBox fx:id="searchCentre" layoutX="23.0" layoutY="14.0" prefHeight="33.0" prefWidth="173.0" promptText="      Select Centre" />
+                                    <Label layoutX="217.0" layoutY="21.0" style="-fx-font-family: Avenir; -fx-font-size: 14px;" text="Choose centre for centre-specific searches, else leave unselected. " />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <ScrollPane prefHeight="457.0" prefWidth="389.0">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="553.0" prefWidth="371.0" style="-fx-background-color: #ede8e8;">
+                                             <children>
+                                                <VBox layoutX="181.0" layoutY="65.0" prefHeight="467.0" prefWidth="167.0">
+                                                   <children>
+                                                      <TextField fx:id="rID2" alignment="CENTER" editable="false" />
+                                                      <TextField fx:id="pName2" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin></TextField>
+                                                      <TextArea fx:id="pDesc2" editable="false" prefHeight="120.0" prefWidth="169.0">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </TextArea>
+                                                      <TextField fx:id="rCost2" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin></TextField>
+                                                      <TextField fx:id="cName2" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin></TextField>
+                                                      <TextField fx:id="rType2" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin></TextField>
+                                                      <TextField fx:id="rStatus2" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin></TextField>
+                                                      <TextField fx:id="vMake2" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin></TextField>
+                                                      <TextField fx:id="vModel2" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin></TextField>
+                                                      <TextField fx:id="dDate2" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin></TextField>
+                                                      <TextField fx:id="rDate2" alignment="CENTER" editable="false">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin></TextField>
+                                                   </children>
+                                                </VBox>
+                                                <Label alignment="CENTER" layoutY="-4.0" prefHeight="36.0" prefWidth="389.0" style="-fx-font-family: Avenir; -fx-font-size: 23px;" text="Repair Details">
+                                                   <font>
+                                                      <Font name="Hoefler Text" size="23.0" />
+                                                   </font>
+                                                </Label>
+                                                <VBox layoutY="65.0" prefHeight="467.0" prefWidth="167.0" styleClass="vbox">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="301.0" prefHeight="27.0" prefWidth="167.0" text="Specialist Repair Id">
+                                                         <font>
+                                                            <Font name="Avenir Roman" size="14.0" />
+                                                         </font></Label>
+                                                      <Label alignment="CENTER" prefHeight="27.0" prefWidth="167.0" text="Part Name">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                         <font>
+                                                            <Font name="Avenir Roman" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="120.0" prefWidth="167.0" text="Part Description">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="27.0" prefWidth="167.0" text="Specialist Repair Cost">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="27.0" prefWidth="167.0" text="Centre Name">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="27.0" prefWidth="167.0" text="Repair Type">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="230.0" prefHeight="27.0" prefWidth="167.0" text="Repair Status">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" prefHeight="27.0" prefWidth="167.0" text="Vehicle Make">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="257.0" prefHeight="27.0" prefWidth="167.0" text="Vehicle Model">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="345.0" prefHeight="27.0" prefWidth="167.0" text="Delivery Date">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="10.0" layoutY="362.0" prefHeight="27.0" prefWidth="167.0" text="Return Date">
+                                                         <VBox.margin>
+                                                            <Insets top="8.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children></AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

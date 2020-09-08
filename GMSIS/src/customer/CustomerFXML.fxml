@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="893.0" minWidth="882.0" prefHeight="893.0" prefWidth="1038.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customer.CustomerFXMLController">
+   <children>
+      <Button fx:id="deleteButton" layoutX="515.0" layoutY="130.0" mnemonicParsing="false" text="Delete" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="145.0" />
+      <Button fx:id="editButton" layoutX="533.0" layoutY="76.0" mnemonicParsing="false" text="Edit" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="102.0" />
+      <Button fx:id="addButton" layoutX="532.0" layoutY="25.0" mnemonicParsing="false" text="Add" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="59.0" />
+      <TableView fx:id="tableView" layoutX="26.0" layoutY="24.0" onMouseClicked="#customerSelected" prefHeight="278.0" prefWidth="488.0" AnchorPane.bottomAnchor="534.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="59.0" />
+      <TextField fx:id="searchTextField" layoutX="16.0" layoutY="16.0" prefHeight="27.0" prefWidth="369.0" promptText="Search" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="427.0" AnchorPane.topAnchor="16.0" />
+      <Button fx:id="searchButton" layoutX="443.0" layoutY="16.0" mnemonicParsing="false" text="Search" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="16.0" />
+      <ChoiceBox fx:id="typeBox" layoutX="510.0" layoutY="16.0" prefHeight="27.0" prefWidth="206.0" AnchorPane.rightAnchor="205.0" AnchorPane.topAnchor="16.0" />
+      <TableView fx:id="vehicleTable" layoutX="28.0" layoutY="392.0" prefHeight="200.0" prefWidth="754.0" AnchorPane.bottomAnchor="275.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="128.0" />
+      <Label layoutX="16.0" layoutY="358.0" prefHeight="27.0" prefWidth="770.0" text="Vehicles" textAlignment="CENTER" AnchorPane.bottomAnchor="491.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="128.0" />
+      <Label layoutX="16.0" layoutY="630.0" prefHeight="27.0" prefWidth="770.0" text="Bookings" textAlignment="CENTER" AnchorPane.bottomAnchor="232.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="128.0" />
+      <TableView fx:id="bookingTable" layoutX="24.0" layoutY="639.0" prefHeight="200.0" prefWidth="754.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="128.0" />
+      <Button layoutX="961.0" layoutY="418.0" mnemonicParsing="false" text="Inspect" AnchorPane.bottomAnchor="448.0" AnchorPane.rightAnchor="16.0" />
+      <Button layoutX="942.0" layoutY="483.0" mnemonicParsing="false" onAction="#addVehicle" text="Add" AnchorPane.bottomAnchor="405.0" AnchorPane.rightAnchor="16.0" />
+      <Button layoutX="957.0" layoutY="677.0" mnemonicParsing="false" text="Inspect" AnchorPane.bottomAnchor="189.0" AnchorPane.rightAnchor="16.0" />
+      <Button layoutX="979.0" layoutY="725.0" mnemonicParsing="false" onAction="#addBooking" text="Add" AnchorPane.bottomAnchor="146.0" AnchorPane.rightAnchor="16.0" />
+      <Button fx:id="billButton" layoutX="982.0" layoutY="764.0" mnemonicParsing="false" onAction="#showBill" text="Bill" AnchorPane.bottomAnchor="103.0" AnchorPane.rightAnchor="16.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="349.0" prefWidth="320.0" stylesheets="@specialist.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="specialist.AddPartController">
+   <children>
+      <Button fx:id="addButton" layoutX="29.0" layoutY="266.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="113.0" text="ADD" />
+      <Button fx:id="cancelButton" layoutX="179.0" layoutY="266.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="113.0" text="CANCEL" />
+      <ComboBox fx:id="newPartComboBox" layoutX="74.0" layoutY="85.0" prefHeight="40.0" prefWidth="173.0" promptText="         Select Part" />
+      <Label alignment="CENTER" prefHeight="50.0" prefWidth="320.0" text="Add Part">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cost" editable="false" layoutX="77.0" layoutY="198.0" />
+      <TextField fx:id="desc" editable="false" layoutX="77.0" layoutY="148.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="797.0" prefWidth="1243.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booking.BookingController">
+   <children>
+      <AnchorPane prefHeight="808.0" prefWidth="1254.0">
+         <children>
+            <Button fx:id="searchButton" layoutX="470.0" layoutY="105.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="117.0" text="Search" />
+            <TextField fx:id="searchField" layoutX="39.0" layoutY="105.0" onAction="#search" onKeyPressed="#search" prefHeight="46.0" prefWidth="417.0" promptText="Search by customer or vehicle details" />
+            <Button fx:id="deleteButton" layoutX="453.0" layoutY="717.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="181.0" text="Delete Bookings" />
+            <Button fx:id="editButton" layoutX="247.0" layoutY="717.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="181.0" text="Edit Bookings" />
+            <Button fx:id="addButton" layoutX="40.0" layoutY="717.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="181.0" text="Add Bookings" />
+            <Button fx:id="vehicleButton" layoutX="658.0" layoutY="717.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="181.0" text="Update Mileage" />
+            <Button fx:id="repairButton" layoutX="1056.0" layoutY="717.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="181.0" text="Record Mechanic Hours" />
+            <TableView fx:id="tableView" layoutX="39.0" layoutY="165.0" prefHeight="532.0" prefWidth="1197.0">
+               <columns>
+                  <TableColumn fx:id="customerName" prefWidth="160.0" text="Customer Name" />
+                  <TableColumn fx:id="vehicleReg" minWidth="1.0" prefWidth="188.0" text="Vehicle Registration" />
+                  <TableColumn fx:id="vehicleManufacturer" prefWidth="185.0" text="Manufacturer" />
+                  <TableColumn fx:id="bookingDate" prefWidth="167.0" text="Booking Date" />
+                  <TableColumn fx:id="returnBooking" prefWidth="174.0" text="Customer Return Date" />
+                  <TableColumn fx:id="bookingTime" minWidth="0.0" prefWidth="148.0" text="Booking Time" />
+                  <TableColumn fx:id="bookingType" prefWidth="172.0" text="Booking Type" />
+               </columns></TableView>
+            <Label blendMode="EXCLUSION" layoutX="39.0" layoutY="16.0" prefHeight="75.0" prefWidth="220.0" text="Bookings" textFill="#4d5b8d" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="49.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Button fx:id="partsUsed" layoutX="856.0" layoutY="717.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="181.0" text="Replacement Part" />
+            <Button fx:id="details" blendMode="EXCLUSION" layoutX="1031.0" layoutY="18.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="198.0" text="View Booking Details" textFill="#0e216b">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect></Button>
+            <RadioButton fx:id="radio_all" layoutX="836.0" layoutY="108.0" mnemonicParsing="false" selected="true" text="All Bookings">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tableViewing" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radio_past" layoutX="957.0" layoutY="108.0" mnemonicParsing="false" text="Past Bookings" toggleGroup="$tableViewing" />
+            <RadioButton fx:id="radio_future" layoutX="1091.0" layoutY="108.0" mnemonicParsing="false" text="Future Bookings" toggleGroup="$tableViewing" />
+            <Separator layoutY="90.0" prefHeight="0.0" prefWidth="1254.0" />
+            <Separator layoutX="228.0" layoutY="697.0" orientation="VERTICAL" prefHeight="97.0" prefWidth="20.0" />
+            <Separator layoutX="433.0" layoutY="696.0" orientation="VERTICAL" prefHeight="97.0" prefWidth="20.0" />
+            <Separator layoutX="638.0" layoutY="697.0" orientation="VERTICAL" prefHeight="97.0" prefWidth="20.0" />
+            <Separator layoutX="839.0" layoutY="697.0" orientation="VERTICAL" prefHeight="97.0" prefWidth="20.0" />
+            <Separator layoutX="1037.0" layoutY="696.0" orientation="VERTICAL" prefHeight="97.0" prefWidth="20.0" />
+            <RadioButton fx:id="radio_hourly" layoutX="836.0" layoutY="136.0" mnemonicParsing="false" text="Hourly" toggleGroup="$tableViewing" />
+            <RadioButton fx:id="radio_daily" layoutX="957.0" layoutY="136.0" mnemonicParsing="false" text="Daily" toggleGroup="$tableViewing" />
+            <RadioButton fx:id="radio_monthly" layoutX="1091.0" layoutY="136.0" mnemonicParsing="false" text="Monthly" toggleGroup="$tableViewing" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

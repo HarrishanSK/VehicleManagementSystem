@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parts.CheckStockController">
+    <stylesheets>
+        <URL value="@checkstock.css" />
+    </stylesheets>
+   <children>
+      <TableView layoutX="56.0" layoutY="136.0" prefHeight="396.0" prefWidth="795.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="descriptionCol" prefWidth="145.1739959716797" text="Description" />
+            <TableColumn fx:id="installDateCol" prefWidth="123.28121948242188" text="Install Date" />
+            <TableColumn fx:id="expireDateCol" prefWidth="114.52896118164062" text="Expire Date" />
+            <TableColumn fx:id="vehicleIDCol" prefWidth="123.8013916015625" text="Vehicle ID" />
+            <TableColumn fx:id="bookingIDCol" prefWidth="135.0" text="Booking ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="backButton" layoutX="40.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back" />
+      <Text layoutX="335.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check Parts Stock">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <HBox layoutX="184.0" layoutY="76.0" prefHeight="46.0" prefWidth="550.0">
+         <children>
+            <TextField fx:id="searchField" prefHeight="27.0" prefWidth="317.0" promptText="Enter part ID to search" />
+            <Button fx:id="searchButton" mnemonicParsing="false" text="Search">
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <VBox layoutX="856.0" layoutY="152.0" prefHeight="232.0" prefWidth="134.0">
+         <children>
+            <Button fx:id="AddButton" mnemonicParsing="false" onAction="#handleAddButtonAction" text="Add" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete">
+               <VBox.margin>
+                  <Insets top="80.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="editButton" mnemonicParsing="false" text="Edit">
+               <VBox.margin>
+                  <Insets top="80.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="requireButton" mnemonicParsing="false" text="Require Placement">
+               <VBox.margin>
+                  <Insets top="80.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
