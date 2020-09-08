@@ -1,4 +1,4 @@
-# VehicleManagementSystem
+# Vehicle Management System
 Software Engineering Project to build a Vehicle Mangement System for a mechanic workshop.
 
 This project was a group project for a Vehicle Management System for a Mechanic Garage Workshop.
