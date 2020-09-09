@@ -1,7 +1,5 @@
 # Vehicle Management System (2017)
-Software Engineering Project to build a Vehicle Mangement System for a mechanic workshop.
-
-This project was a group project for a Vehicle Management System for a Mechanic Garage Workshop.
+This Software Engineering Project was a group project to build a Vehicle Management System for a Mechanic Garage Workshop.
 Majority of the code written by me can be found at "./GMSIS/src/vehicle/".
 
 See the "SE_TestReport.pdf" for an outline of the module "vehicle" which I created for this project.
